@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Management system </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/adnin">User Management system</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/admin">user management</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li> <p style="color: white;">UserName: </p> </li>
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          <!-- <li><a href="/registraion"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h3>Welcome to admin management system</h3>
+      <p>here we will show detail.</p>
+      <table class="table table-bordered">
+        <tr>
+          <th>Reg Id</th>
+          <th>name</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>mobile</th>
+          <th>city</th>
+          <th>address</th>
+          <th>createdAt</th>
+          <th>status</th>
+          <th>action</th>
+        </tr>
+          <% for(let row of userDetail) { %>
+           <tr>
+               <td><%= row._id %></td>
+               <td><%= row.name %></td>
+               <td><%= row.gender %></td>
+               <td><%= row.userName %></td>
+               <td><%= row.mobile %></td>
+               <td><%= row.city %></td>
+               <td><%= row.address %></td>
+               <td><%= row.info %></td>
+               <td><%= row.hobby %></td>
+               <td></td>
+          </tr>
+          <% } %>
+    </table>
+    </div>
+  </body>
+</html>

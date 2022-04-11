@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Management system </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/users">User Management system</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/users">User Detail</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li> <p style="color: white;">UserName: <%= email%> </p> </li>
+            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+          <!-- <li><a href="/registraion"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h3>Welcome to user management system</h3>
+      <p>here we will show detail.</p>
+      <h1>
+        name :  <%= userDetail[0].name%> <br>
+        userName:  <%= userDetail[0].userName%> <br>
+        mobile:  <%= userDetail[0].mobile%><br>
+        address:  <%= userDetail[0].address%><br>
+        city:  <%= userDetail[0].city%><br>
+        gender:  <%= userDetail[0].gender%><br>
+        hobby:  <%= userDetail[0].hobby%><br>
+        role: <%= userDetail[0].role%><br>
+        info: <%= userDetail[0].info%><br>
+      </h1>
+    </div>
+  </body>
+</html>
